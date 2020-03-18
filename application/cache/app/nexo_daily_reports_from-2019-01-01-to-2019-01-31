@@ -1,0 +1,323 @@
+a:3:{s:4:"time";i:1548294253;s:3:"ttl";i:86400;s:4:"data";s:9701:"
+<div id="nexo-global-wrapper">
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg launch_loading" data-toggle="modal" data-target="#myModal" style="display:none;"></button>
+
+<div class="well well-sm">
+
+<h2 class="text-center">Gulf Apps Demo</h2>
+
+<h4 class="text-center">Daily sales report <br> from Tuesday 01 January 2019 toThursday 31 January 2019</h4>
+
+<div class="hideOnPrint">
+    <div class="container">
+        <div class="row">
+            <div class='col-md-5'>
+               <div class="form-group">
+                    <div class='input-group date' id='datetimepicker6'>
+                        <input type='text' class="form-control" name="start" value="2019-01-01" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker7'>
+                        <input type='text' class="form-control" name="end" value="2019-01-31" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <input class="btn btn-primary submitTime" type="submit" value="Circumscribe results">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+<div class="well well-sm">
+    <h4>Details of the terms used</h4>
+    Sal : Sales<br>
+    Se : Selling Expenses<br>
+    Nr : Net Revenues (Without discount, rebate and discount)<br>
+    Rs : Receivables<br>            
+    No: Number of Orders<br>
+    <div class="hideOnPrint">
+		<span class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-search"></i></span>: View more details<br>
+	</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade hideOnPrint" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Carga en Proceso</h4>
+      </div>
+      <div class="modal-body">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+            <span class="progress_level">0</span>%
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+@media print {
+	.hideOnPrint {
+		display:none !important;
+	}
+}
+</style>
+			<table class="table table-bordered table-striped box">
+			<thead>
+				<tr>
+					<td colspan="7" class="text-center">Details month:January 2019</td>
+				</tr>
+				<tr>
+					<td width="150">Monday</td>
+					<td width="150">Tuesday</td>
+					<td width="150">Wednesday</td>
+					<td width="150">Thursday</td>
+					<td width="150">Friday</td>
+					<td width="150">Saturday</td>
+					<td width="150">Sunday</td>
+				</tr>                	
+			</thead>
+			<tbody>
+																																																																						</tbody>
+		</table>
+	</div>
+<script type="text/javascript">
+
+	"use strict";
+
+// Date Picker
+$(function () {
+	$('#datetimepicker6').datetimepicker({
+		format	:	'YYYY-MM-DD'
+	});
+	$('#datetimepicker7').datetimepicker({
+		useCurrent: false, //Important! See issue #1075
+		format	:	'YYYY-MM-DD'
+	});
+	$("#datetimepicker6").on("dp.change", function (e) {
+		$('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+	});
+	$("#datetimepicker7").on("dp.change", function (e) {
+		$('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+	});
+});
+
+// Load Reports
+$( document ).ready(function(e) {
+	$( '.submitTime' ).bind( 'click', function(){
+		if( $( '[name="start"]' ).val() != '' && $( '[name="end"]' ).val() != '' ) {
+			document.location	=	'https://www.cstarsoft.com/restoopos/dashboard/nexo/rapports/journalier/' + $( '[name="start"]' ).val() + '/' + $( '[name="end"]' ).val() + '?refresh=true';
+		} else {
+			alert( 'The dates are not specified' );
+		}
+	});
+});
+
+var	Nexo_Daily_Report	=	new function(){
+	// Currency
+	this.CurrencyBefore	=	'';
+	this.CurrencyAfter	=	'OMR';
+
+	// Order Types
+	this.CommandeCash	=	'nexo_order_comptant';
+	this.CommandeDevis	=	'nexo_order_devis';
+	this.CommandeAvance	=	'nexo_order_advance';
+
+	// Storing Dates
+	this.Dates			=	[];
+	
+	/**
+	 * Start Report
+	**/
+	
+	this.Start			=	function(){
+		
+		this.Reset();
+		
+		$( '.get-reports' ).each( function(){
+			Nexo_Daily_Report.Dates.push( $(this).data( 'day' ) );
+		});
+		
+		this.EntryLength	=	this.Dates.length;
+		
+		this.FetchReport();
+	};
+	
+	/**
+	 * Fetch report for all dates
+	**/
+	
+	this.FetchReport=	function(){
+		
+		if( typeof this.Dates[0] == 'undefined' ) {
+			this.CloseModal();
+			return false;
+		}
+		
+		this.DisplayModal();
+		var tableItemId		=	this.Dates[0];
+		
+		$.ajax( 'https://www.cstarsoft.com/restoopos/dashboard/nexo/rest/get/nexo_commandes/DATE_CREATION/filter_date_interval/?', {
+			data			:	_.extend( tendoo.csrf_data, _.object( [ 'key' ], [ this.Dates[0] ] ) ),
+			type			:	'POST',
+			dataType		:	'json',
+			success			:	function( json ){
+				if( json.length > 0 ) {	
+					
+					// Chiffre d'affaire net sans charges commerciales
+					var ChiffreDaffaireNet	=	0;
+					_.each( json, function( value, key ) {
+						// Nexo_Daily_Report.CommandeDevis,
+						// , Nexo_Daily_Report.CommandeAvance
+						if( _.contains( [ Nexo_Daily_Report.CommandeCash ], value.TYPE ) ) {
+							ChiffreDaffaireNet	+=	Math.abs( parseFloat( value.TOTAL ) );
+						} else if( _.contains( [ Nexo_Daily_Report.CommandeAvance ], value.TYPE ) ) {
+							ChiffreDaffaireNet	+=	Math.abs( parseFloat( value.SOMME_PERCU ) );
+						}
+
+					});
+					
+					$( '[data-day="' + tableItemId + '"]' )
+						.find( '.total_chiffre_daffaire_net' )
+						.html( NexoAPI.DisplayMoney( ChiffreDaffaireNet ) );
+						
+						
+					// Total				
+					var CurrentTotal		=	0;
+					
+					_.each( json, function( value, key ) {
+						var RRR	=	NexoAPI.ParseFloat( parseFloat( value.RISTOURNE ) + parseFloat( value.RABAIS ) + parseFloat( value.REMISE ) );
+
+						CurrentTotal	+=	( Math.abs( parseFloat( value.TOTAL ) + RRR ) );
+					});
+					
+					$( '[data-day="' + tableItemId + '"]' )
+						.find( '.total_des_commandes' )
+						.html( NexoAPI.DisplayMoney( CurrentTotal ) );
+					
+					// Sommes dues
+					var CurrentDues		=	0;
+					_.each( json, function( value, key ) {
+						// var RRR	=	NexoAPI.ParseFloat( parseFloat( value.RISTOURNE ) + parseFloat( value.RABAIS ) + parseFloat( value.REMISE ) );
+						// Les sommes dues ne sont calculé que pour les avance et devis
+						if( _.contains( [ Nexo_Daily_Report.CommandeAvance, Nexo_Daily_Report.CommandeDevis ], value.TYPE ) ) {
+							var SommesDues	=	( NexoAPI.ParseFloat( value.TOTAL ) - NexoAPI.ParseFloat( value.SOMME_PERCU ) ); // - RRR;								
+							CurrentDues	+=	SommesDues;
+						}
+					});
+					$( '[data-day="' + tableItemId + '"]' )
+						.find( '.total_sommes_due' )
+						.html( NexoAPI.DisplayMoney( CurrentDues ) );
+						
+					// Total Commandes
+					$( '[data-day="' + tableItemId + '"]' )
+						.find( '.order_nbr' )
+						.html( json.length );
+						
+					// RRR
+					var CurrentRRR		=	0;
+					_.each( json, function( value, key ) {
+						// Les sommes dues ne sont calculé que pour les avance et devis
+						if( _.contains( [ Nexo_Daily_Report.CommandeAvance, Nexo_Daily_Report.CommandeDevis ], value.TYPE ) ) {
+							var RRR	=	NexoAPI.ParseFloat( parseFloat( value.RISTOURNE ) + parseFloat( value.RABAIS ) + parseFloat( value.REMISE ) );								
+							CurrentRRR	+=	RRR;
+						}
+					});
+					$( '[data-day="' + tableItemId + '"]' )
+						.find( '.total_sommes_rrr' )
+						.html( NexoAPI.DisplayMoney( CurrentRRR ) );
+					
+				}
+				Nexo_Daily_Report.FetchReport();
+			}
+		});
+		
+		// Remove index
+		this.Dates.shift();
+	};
+	
+	/** 
+	 * Reset the calendar 
+	**/
+	
+	this.Reset			=	function(){
+		this.__TimeCalled	=	1;
+		$( '.progress_level' ).html( 1 );
+		$( '.progress-bar' ).css( 'width', '1%' ).data( 'aria-valuenow', 1 );
+		
+	}
+	
+	/**
+	 * Display Modal
+	**/
+	
+	this.DisplayModal	=	function(){
+		if( ! $( '.launch_loading' ).data( 'clicked' ) ) {
+			$( '.launch_loading' ).trigger( 'click' );
+			$( '.launch_loading' ).data( 'clicked', true );
+		} else {
+			var Percent	=	( this.__TimeCalled / this.EntryLength ) * 100;
+			this.SetPercent( Math.ceil( Percent ) );
+		}
+		this.__TimeCalled++;
+	};
+	
+	/**
+	 * Progress Bar
+	**/
+	
+	this.SetPercent		=	function( percent ) {
+		$( '.progress_level' ).html( percent );
+		$( '.progress-bar' ).css( 'width', percent + '%' ).data( 'aria-valuenow', percent );
+	}
+	
+	/**
+	 * Close modal
+	**/
+	
+	this.CloseModal		=	function(){
+		$( '[data-dismiss="modal"]' ).trigger( 'click' );
+	}
+	
+}
+$( document ).ready(function(e) {
+	
+	/**
+	 * Bind report event to valid date
+	**/
+	
+    /*$( '.get-reports .btn_refresh' ).each( function(){
+		$(this).bind( 'click', function(){
+			
+		});
+	});*/
+	
+	Nexo_Daily_Report.Start();
+});
+</script>
+
+";}

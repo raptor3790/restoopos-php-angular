@@ -1,0 +1,482 @@
+a:3:{s:4:"time";i:1541762377;s:3:"ttl";i:999999999;s:4:"data";s:19593:"<form class="form-inline circonstrire">
+  <div class="form-group">
+    <label class="sr-only" for="report_date">Specify a date</label>
+    <div class="input-group">
+      <div class="input-group-addon">Specify a date</div>
+      <input type="text" class="form-control" id="report_date" placeholder="Example: 2018">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary circonstrire">View Report</button>
+</form>
+<br />
+<script type="text/javascript">
+
+"use strict";
+
+$( document ).ready(function(e) {
+    $( '.circonstrire' ).bind( 'submit', function() {
+		if( $( '#report_date' ).val() != '' ) {
+			document.location =	'http://cstarsoft.com/restoopos/dashboard/nexo_premium/Controller_Mouvement_Annuel_Tresorerie/' + $( '#report_date' ).val();
+		} else {
+			bootbox.alert( 'You must specify a Date' );
+		}
+		return false;
+	});
+});
+</script>
+<div id="nexo-global-wrapper">
+    	<div class="well well-sm">
+            <h2 class="text-center">Gulf Apps Demo</h2>
+
+            <h4 class="text-center">Cash flows for 2018</h4>
+                        <p class="text-center">Printed by: joker</p>
+        </div>
+    	<div class="hidden-print">
+	    	<div class="alert alert-info"><button type="button" class="close" data-dismiss="alert"><i class="fa fa-times"></i></button><i style="font-size:18px;margin-right:5px;" class="fa fa-info"></i> Cash flow from operational activities.</div>        </div>
+		<div class="table-responsive">
+			<table class="table table-bordered table-striped box">
+        	<thead>
+            	<tr>
+                	<td colspan="14">Annual movement of cash</td>
+                </tr>
+                <tr>
+                	<td width="80">Wording / month</td>
+					                    		                    <td width="90" class="month_thead"
+                        	data-start-date="2018-01-01 00:00:00"
+                            data-end-date="2018-01-31 23:59:59"
+						>January</td>
+					                    		                    <td width="90" class="month_thead"
+                        	data-start-date="2018-02-01 00:00:00"
+                            data-end-date="2018-02-28 23:59:59"
+						>February</td>
+					                    		                    <td width="90" class="month_thead"
+                        	data-start-date="2018-03-01 00:00:00"
+                            data-end-date="2018-03-31 23:59:59"
+						>March</td>
+					                    		                    <td width="90" class="month_thead"
+                        	data-start-date="2018-04-01 00:00:00"
+                            data-end-date="2018-04-30 23:59:59"
+						>April</td>
+					                    		                    <td width="90" class="month_thead"
+                        	data-start-date="2018-05-01 00:00:00"
+                            data-end-date="2018-05-31 23:59:59"
+						>May</td>
+					                    		                    <td width="90" class="month_thead"
+                        	data-start-date="2018-06-01 00:00:00"
+                            data-end-date="2018-06-30 23:59:59"
+						>June</td>
+					                    		                    <td width="90" class="month_thead"
+                        	data-start-date="2018-07-01 00:00:00"
+                            data-end-date="2018-07-31 23:59:59"
+						>July</td>
+					                    		                    <td width="90" class="month_thead"
+                        	data-start-date="2018-08-01 00:00:00"
+                            data-end-date="2018-08-31 23:59:59"
+						>August</td>
+					                    		                    <td width="90" class="month_thead"
+                        	data-start-date="2018-09-01 00:00:00"
+                            data-end-date="2018-09-30 23:59:59"
+						>September</td>
+					                    		                    <td width="90" class="month_thead"
+                        	data-start-date="2018-10-01 00:00:00"
+                            data-end-date="2018-10-31 23:59:59"
+						>October</td>
+					                    		                    <td width="90" class="month_thead"
+                        	data-start-date="2018-11-01 00:00:00"
+                            data-end-date="2018-11-30 23:59:59"
+						>November</td>
+					                    		                    <td width="90" class="month_thead"
+                        	data-start-date="2018-12-01 00:00:00"
+                            data-end-date="2018-12-31 23:59:59"
+						>December</td>
+					                    <td width="80">Total</td>
+                </tr>
+            </thead>
+            <tbody id="tbody-wrapper">
+            	                                <tr class="info">
+                	<td>Income(+)</td>
+                                        <td class="table-input-1 table-recettes-item table-recettes-1 text-right">0</td>
+                                        <td class="table-input-2 table-recettes-item table-recettes-2 text-right">0</td>
+                                        <td class="table-input-3 table-recettes-item table-recettes-3 text-right">0</td>
+                                        <td class="table-input-4 table-recettes-item table-recettes-4 text-right">0</td>
+                                        <td class="table-input-5 table-recettes-item table-recettes-5 text-right">0</td>
+                                        <td class="table-input-6 table-recettes-item table-recettes-6 text-right">0</td>
+                                        <td class="table-input-7 table-recettes-item table-recettes-7 text-right">0</td>
+                                        <td class="table-input-8 table-recettes-item table-recettes-8 text-right">0</td>
+                                        <td class="table-input-9 table-recettes-item table-recettes-9 text-right">0</td>
+                                        <td class="table-input-10 table-recettes-item table-recettes-10 text-right">0</td>
+                                        <td class="table-input-11 table-recettes-item table-recettes-11 text-right">0</td>
+                                        <td class="table-input-12 table-recettes-item table-recettes-12 text-right">0</td>
+                                        <td class="total-table-recettes-item table-recettes text-right"></td>
+                </tr>
+                                                <tr class="warning">
+                	<td>Spending</td>
+                                        <td class="table-input-1 table-depenses-item table-depenses-1 text-right">0</td>
+                                        <td class="table-input-2 table-depenses-item table-depenses-2 text-right">0</td>
+                                        <td class="table-input-3 table-depenses-item table-depenses-3 text-right">0</td>
+                                        <td class="table-input-4 table-depenses-item table-depenses-4 text-right">0</td>
+                                        <td class="table-input-5 table-depenses-item table-depenses-5 text-right">0</td>
+                                        <td class="table-input-6 table-depenses-item table-depenses-6 text-right">0</td>
+                                        <td class="table-input-7 table-depenses-item table-depenses-7 text-right">0</td>
+                                        <td class="table-input-8 table-depenses-item table-depenses-8 text-right">0</td>
+                                        <td class="table-input-9 table-depenses-item table-depenses-9 text-right">0</td>
+                                        <td class="table-input-10 table-depenses-item table-depenses-10 text-right">0</td>
+                                        <td class="table-input-11 table-depenses-item table-depenses-11 text-right">0</td>
+                                        <td class="table-input-12 table-depenses-item table-depenses-12 text-right">0</td>
+                                        <td class="total-table-depenses-item table-depenses text-right"></td>
+                </tr>
+                                                <tr class="success">
+                	<td>Final balance</td>
+                                        <td class="table-input-1 solde-finale-item solde-finale-1 text-right">0</td>
+                                        <td class="table-input-2 solde-finale-item solde-finale-2 text-right">0</td>
+                                        <td class="table-input-3 solde-finale-item solde-finale-3 text-right">0</td>
+                                        <td class="table-input-4 solde-finale-item solde-finale-4 text-right">0</td>
+                                        <td class="table-input-5 solde-finale-item solde-finale-5 text-right">0</td>
+                                        <td class="table-input-6 solde-finale-item solde-finale-6 text-right">0</td>
+                                        <td class="table-input-7 solde-finale-item solde-finale-7 text-right">0</td>
+                                        <td class="table-input-8 solde-finale-item solde-finale-8 text-right">0</td>
+                                        <td class="table-input-9 solde-finale-item solde-finale-9 text-right">0</td>
+                                        <td class="table-input-10 solde-finale-item solde-finale-10 text-right">0</td>
+                                        <td class="table-input-11 solde-finale-item solde-finale-11 text-right">0</td>
+                                        <td class="table-input-12 solde-finale-item solde-finale-12 text-right">0</td>
+                                        <td class="total-solde-finale-item solde-finale text-right"></td>
+                </tr>
+                            </tbody>
+        </table>
+		</div>	
+    	
+        <hr />
+        <p></p>
+        <br />
+    </div>
+<script type="text/javascript">
+
+"use strict";
+
+var NexoCashFlow	=	new function(){
+
+	this.Index				=	0;
+	this.__TimeCalled		=	0;
+	this.Nexo_Order_Avance	=	'nexo_order_advance';
+	this.Nexo_Order_Cash	=	["nexo_order_comptant"];
+	this.Nexo_Order_Devis	=	'nexo_order_devis';
+	this.CurrencyBefore		=	'';
+	this.CurrencyAfter		=	'OMR';
+
+	/**
+	 * Init class
+	 *
+	**/
+
+	this.Init		=	function(){
+		this.ShowStats();
+	}
+
+	/**
+	 * Show Stats
+	 *
+	**/
+
+	this.ShowStats	=	function(){
+
+		this.EntryLength	=	$( '.month_thead' ).length;
+		this.Reset();
+		this.GetReport();
+
+	};
+
+	/**
+	 * get report
+	 *
+	**/
+
+	this.GetReport	=	function() {
+		if( this.Index < this.EntryLength ) {
+			this.DisplayModal();
+			var	data	=	_.object( [ 'start', 'end' ], [ $( '.month_thead' ).eq( this.Index ).data( 'start-date' ), $( '.month_thead' ).eq( this.Index ).data( 'end-date' ) ] );
+
+			$.post(
+				'http://cstarsoft.com/restoopos/nexo_premium/flux/?',
+				data,
+				function( content ) {
+					NexoCashFlow.Index++;
+					NexoCashFlow.TreatReport( content, NexoCashFlow.Index );
+					NexoCashFlow.GetReport();
+				}
+			);
+		} else {
+			NexoCashFlow.CalculRecettesAccumulees();
+			NexoCashFlow.CalculDepenseAccumulees();
+			NexoCashFlow.CalculSoldeFinal();
+			NexoCashFlow.CalculLignes();
+			this.CloseModal();
+		}
+	}
+
+	/**
+	 * Calcul des lignes
+	 *
+	**/
+
+	this.CalculLignes		=	function(){
+		// Calcul des depenses
+		var TotalDepenses	=	0;
+		$( '.table-depenses-item' ).each( function(){
+			TotalDepenses	+=	NexoAPI.ParseFloat( $( this ).attr( 'table-amount' ) );
+		});
+
+		$( '.total-table-depenses-item' ).attr( 'table-amount', TotalDepenses ).html(
+			NexoCashFlow.CurrencyBefore + ' ' +
+			'<span class="amount" amount="' + ( TotalDepenses ) + '">' + NexoAPI.Format( TotalDepenses ) + '</span>' +
+			NexoCashFlow.CurrencyAfter + ' '
+		);
+
+		// Calcul des recettes
+		var TotalRecettes		=	0;
+		var TotalRecetteIndex	=	0;
+		$( '.table-recettes-item' ).each( function(){
+
+			TotalRecettes	+=	(
+				NexoAPI.ParseFloat( $( this ).attr( 'table-amount' ) )
+			);
+
+			TotalRecetteIndex++;
+		});
+
+		$( '.total-table-recettes-item' ).attr( 'table-amount', TotalRecettes ).html(
+			NexoCashFlow.CurrencyBefore + ' ' +
+			'<span class="amount" amount="' + ( TotalRecettes ) + '">' + NexoAPI.Format( TotalRecettes ) + '</span>' +
+			NexoCashFlow.CurrencyAfter + ' '
+		);
+
+		/*// Calcul des recettes ac
+		var TotalRecettesAc	=	0;
+		$( '.table-recettes-ac-item' ).each( function(){
+			TotalRecettesAc	+=	NexoAPI.ParseFloat( $( this ).attr( 'table-amount' ) );
+		});
+		$( '.total-table-recettes-ac-item' ).attr( 'table-amount', TotalRecettesAc ).html(
+			NexoCashFlow.CurrencyBefore + ' ' +
+			'<span class="amount" amount="' + ( TotalRecettesAc ) + '">' + NexoAPI.Format( TotalRecettesAc ) + '</span>' +
+			NexoCashFlow.CurrencyAfter + ' '
+		);*/
+
+		// Calcul des depenses ac
+		/*var TotalDepensesAc	=	0;
+		$( '.table-depenses-ac-item' ).each( function(){
+			TotalDepensesAc	+=	NexoAPI.ParseFloat( $( this ).attr( 'table-amount' ) );
+		});
+		$( '.total-table-depenses-ac-item' ).attr( 'table-amount', TotalDepensesAc ).html(
+			NexoCashFlow.CurrencyBefore + ' ' +
+			'<span class="amount" amount="' + ( TotalDepensesAc ) + '">' + NexoAPI.Format( TotalDepensesAc ) + '</span>' +
+			NexoCashFlow.CurrencyAfter + ' '
+		);*/
+
+		// Calcul des soldes finales
+		var TotalSoldeFinale	=	0;
+		$( '.solde-finale-item' ).each( function(){
+			TotalSoldeFinale	+=	NexoAPI.ParseFloat( $( this ).attr( 'table-amount' ) );
+		});
+		$( '.total-solde-finale-item' ).attr( 'table-amount', TotalSoldeFinale ).html(
+			NexoCashFlow.CurrencyBefore + ' ' +
+			'<span class="amount" amount="' + ( TotalSoldeFinale ) + '">' + NexoAPI.Format( TotalSoldeFinale ) + '</span>' +
+			NexoCashFlow.CurrencyAfter + ' '
+		);
+
+	};
+
+	/**
+	 * Calcul solde final
+	 *
+	**/
+
+	this.CalculSoldeFinal			=	function(){
+		var NbrInput				=	$( '.table-recettes-item' ).length;
+		var Index					=	0;
+		var i;
+		for( i = 0; i <= NbrInput; i++ ) {
+			var Actifs	=			0;
+			$( '.table-input-' + i ).each( function(){
+				if( $( this ).hasClass( 'table-recettes-item' ) ) {
+					Actifs		+=	NexoAPI.ParseFloat( $( this ).attr( 'table-amount' ) )
+				}
+			});
+
+			var Passifs	=			0;
+			$( '.table-input-' + i ).each( function(){
+				if( $( this ).hasClass( 'table-depenses-item' ) ) {
+					Passifs		+=	NexoAPI.ParseFloat( $( this ).attr( 'table-amount' ) )
+				}
+			});
+
+			$( '.solde-finale-' + i ).attr( 'table-amount', NexoAPI.ParseFloat( Actifs - Passifs ) ).html(
+				NexoCashFlow.CurrencyBefore + ' ' +
+				'<span class="amount" amount="' + ( Actifs - Passifs ) + '">' + NexoAPI.Format( Actifs - Passifs ) + '</span>' +
+				NexoCashFlow.CurrencyAfter + ' '
+			);
+
+		}
+	};
+
+	/**
+	 * Calcul solde initial
+	 *
+	**/
+
+	this.CalculRecettesAccumulees	=	function(){
+		var index			=	1;
+		var currentAmount	=	0;
+
+		$( '.table-recettes-ac-item' ).each( function(){
+			currentAmount	+=	NexoAPI.ParseFloat( $( '.table-recettes-' + index ).attr( 'table-amount' ) );
+			$( this ).attr( 'table-amount', currentAmount ).html(
+				NexoCashFlow.CurrencyBefore + ' ' +
+				'<span class="amount" amount="' + currentAmount + '">' + NexoAPI.Format( currentAmount ) + '</span>' +
+				NexoCashFlow.CurrencyAfter + ' '
+			);
+			index++;
+		});
+	}
+
+	/**
+	 * Calcul Depense accumulés
+	 *
+	**/
+
+	this.CalculDepenseAccumulees	=	function(){
+		var index			=	1;
+		var currentAmount	=	0;
+
+		$( '.table-depenses-ac-item' ).each( function(){
+			currentAmount	+=	NexoAPI.ParseFloat( $( '.table-depenses-' + index ).attr( 'table-amount' ) );
+			$( this ).attr( 'table-amount', currentAmount ).html(
+				NexoCashFlow.CurrencyBefore + ' ' +
+				'<span class="amount" amount="' + currentAmount + '">' + NexoAPI.Format( currentAmount ) + '</span>' +
+				NexoCashFlow.CurrencyAfter + ' '
+			);
+			index++;
+		});
+	}
+
+	/**
+	 * Reset the calendar
+	**/
+
+	this.Reset			=	function(){
+		this.__TimeCalled	=	1;
+		$( '.progress_level' ).html( 1 );
+		$( '.progress-bar' ).css( 'width', '1%' ).data( 'aria-valuenow', 1 );
+	}
+
+	/**
+	 * Treat Report
+	 *
+	**/
+
+	this.RRR_Total		=	0;
+	this.AvanceTotal	=	0;
+	this.CashTotal		=	0;
+	this.BillsTotal		=	0;
+
+	this.TreatReport	=	function( content, index ) {
+		_.map( content.orders, function( value, index ) {
+
+			var CurrentOrderRRR				=	( NexoAPI.ParseFloat( value.RISTOURNE ) + NexoAPI.ParseFloat( value.RABAIS ) + NexoAPI.ParseFloat( value.REMISE ) );
+				NexoCashFlow.RRR_Total		+=	CurrentOrderRRR;
+
+			if( _.indexOf( NexoCashFlow.Nexo_Order_Cash, value.TYPE ) != -1 ) {
+				NexoCashFlow.CashTotal		+=	( NexoAPI.ParseFloat( value.TOTAL ) + NexoAPI.ParseFloat( CurrentOrderRRR ) );
+			} else if( value.TYPE == NexoCashFlow.Nexo_Order_Avance ) {
+				NexoCashFlow.AvanceTotal	+=	NexoAPI.ParseFloat( value.SOMME_PERCU );
+			}
+		});
+
+		_.map( content.bills, function( value, index ) {
+			NexoCashFlow.BillsTotal		+=	NexoAPI.ParseFloat( value.MONTANT );
+		});
+
+		$( '.table-recettes-' + index )
+			.attr( 'table-amount', NexoAPI.ParseFloat( this.CashTotal + this.AvanceTotal ) )
+			.html(
+				this.CurrencyBefore + ' ' +
+				'<span class="amount" amount="' + this.CashTotal + this.AvanceTotal + '">' + NexoAPI.Format( this.CashTotal + this.AvanceTotal ) + '</span>' +
+				this.CurrencyAfter + ' '
+			);
+
+		$( '.table-depenses-' + index )
+			.attr( 'table-amount', NexoAPI.ParseFloat( this.BillsTotal + this.RRR_Total ) )
+			.html(
+				this.CurrencyBefore + ' ' +
+				'<span class="amount" amount="' + ( this.BillsTotal + this.RRR_Total ) +  '">' + NexoAPI.Format( this.BillsTotal + this.RRR_Total ) + '</span>' +
+				this.CurrencyAfter + ' '
+			);
+
+		// Reset Totals
+		this.RRR_Total		=	0;
+		this.AvanceTotal	=	0;
+		this.CashTotal		=	0;
+		this.BillsTotal		=	0;
+	}
+
+	/**
+	 * Display Modal
+	**/
+
+	this.DisplayModal	=	function(){
+		if( ! $( '.launch_loading' ).data( 'clicked' ) ) {
+			$( '.launch_loading' ).trigger( 'click' );
+			$( '.launch_loading' ).data( 'clicked', true );
+		} else {
+			var Percent	=	( this.__TimeCalled / this.EntryLength ) * 100;
+			this.SetPercent( Math.ceil( Percent ) );
+		}
+		this.__TimeCalled++;
+	};
+
+	/**
+	 * Progress Bar
+	**/
+
+	this.SetPercent		=	function( percent ) {
+		$( '.progress_level' ).html( percent );
+		$( '.progress-bar' ).css( 'width', percent + '%' ).data( 'aria-valuenow', percent );
+	}
+
+	/**
+	 * Close modal
+	**/
+
+	this.CloseModal		=	function(){
+		$( '[data-dismiss="modal"]' ).trigger( 'click' );
+	}
+};
+
+$( document ).ready(function(e) {
+	NexoCashFlow.Init();
+});
+
+</script>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg launch_loading" data-toggle="modal" data-target="#myModal" style="display:none;"></button>
+
+<div class="modal fade hidden-print" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Loading in progress…</h4>
+      </div>
+      <div class="modal-body">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+            <span class="progress_level">0</span>%
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
+";}

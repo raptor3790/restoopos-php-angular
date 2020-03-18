@@ -1,0 +1,361 @@
+a:3:{s:4:"time";i:1546900657;s:3:"ttl";i:999999999;s:4:"data";s:14348:"<form class="form-inline circonstrire">
+  <div class="form-group">
+    <label class="sr-only" for="report_date">Specify a date</label>
+    <div class="input-group">
+      <div class="input-group-addon">Specify a date</div>
+      <input type="text" class="form-control" id="report_date" placeholder="Example: 2019">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary circonstrire">View Report</button>
+</form>
+<br />
+<script type="text/javascript">
+
+"use strict";
+
+$( document ).ready(function(e) {
+    $( '.circonstrire' ).bind( 'submit', function() {
+		if( $( '#report_date' ).val() != '' ) {
+			document.location =	'https://www.cstarsoft.com/restoopos/dashboard/nexo_premium/Controller_Stats_Des_Ventes/' + $( '#report_date' ).val();
+		} else {
+			bootbox.alert( 'You must specify a Date' );
+		}
+		return false;
+	});
+});
+</script>
+<div id="nexo-global-wrapper">
+  <div class="well well-sm">
+    <h2 class="text-center">Gulf Apps Demo</h2>
+    <h4 class="text-center">Sales statistics<br>for 2019</h4>
+        <p class="text-center">Printed by: joker</p>
+  </div>
+  <div class="hidden-print"> <div class="alert alert-info"><button type="button" class="close" data-dismiss="alert"><i class="fa fa-times"></i></button><i style="font-size:18px;margin-right:5px;" class="fa fa-info"></i> Monthly overview of the State of sales according to the hierarchy of categories. All amounts shown are gross.</div> </div>
+ <div class="table-responsive">
+ 		 <table class="table table-bordered table-striped box">
+    <thead>
+      <tr id="table_name">
+        <td colspan="14">Sales Statistics</td>
+      </tr>
+      <tr id="table-content">
+        <td width="100">Level 1</td>        <td width="80" class="text-right">January</td>
+        			        <td width="80" class="text-right">February</td>
+        			        <td width="80" class="text-right">March</td>
+        			        <td width="80" class="text-right">April</td>
+        			        <td width="80" class="text-right">May</td>
+        			        <td width="80" class="text-right">June</td>
+        			        <td width="80" class="text-right">July</td>
+        			        <td width="80" class="text-right">August</td>
+        			        <td width="80" class="text-right">September</td>
+        			        <td width="80" class="text-right">October</td>
+        			        <td width="80" class="text-right">November</td>
+        			        <td width="80" class="text-right">December</td>
+        			        <td width="100" class="text-right"><strong>
+          Total          </strong></td>
+      </tr>
+    </thead>
+    <tbody id="bodyContent">
+      <td data-id="1">Test Category</td><td month-id="1" class="text-right"></td><td month-id="2" class="text-right"></td><td month-id="3" class="text-right"></td><td month-id="4" class="text-right"></td><td month-id="5" class="text-right"></td><td month-id="6" class="text-right"></td><td month-id="7" class="text-right"></td><td month-id="8" class="text-right"></td><td month-id="9" class="text-right"></td><td month-id="10" class="text-right"></td><td month-id="11" class="text-right"></td><td month-id="12" class="text-right"></td><td col-total class="text-right success"></td></tr><td data-id="2">Pizza</td><td month-id="1" class="text-right"></td><td month-id="2" class="text-right"></td><td month-id="3" class="text-right"></td><td month-id="4" class="text-right"></td><td month-id="5" class="text-right"></td><td month-id="6" class="text-right"></td><td month-id="7" class="text-right"></td><td month-id="8" class="text-right"></td><td month-id="9" class="text-right"></td><td month-id="10" class="text-right"></td><td month-id="11" class="text-right"></td><td month-id="12" class="text-right"></td><td col-total class="text-right success"></td></tr><td data-id="3">Burger</td><td month-id="1" class="text-right"></td><td month-id="2" class="text-right"></td><td month-id="3" class="text-right"></td><td month-id="4" class="text-right"></td><td month-id="5" class="text-right"></td><td month-id="6" class="text-right"></td><td month-id="7" class="text-right"></td><td month-id="8" class="text-right"></td><td month-id="9" class="text-right"></td><td month-id="10" class="text-right"></td><td month-id="11" class="text-right"></td><td month-id="12" class="text-right"></td><td col-total class="text-right success"></td></tr>      <tr class="success">
+                        <td><strong>
+          Total          </strong></td>
+                                        <td total-id="1" class="text-right"></td>
+                                                <td total-id="2" class="text-right"></td>
+                                                <td total-id="3" class="text-right"></td>
+                                                <td total-id="4" class="text-right"></td>
+                                                <td total-id="5" class="text-right"></td>
+                                                <td total-id="6" class="text-right"></td>
+                                                <td total-id="7" class="text-right"></td>
+                                                <td total-id="8" class="text-right"></td>
+                                                <td total-id="9" class="text-right"></td>
+                                                <td total-id="10" class="text-right"></td>
+                                                <td total-id="11" class="text-right"></td>
+                                                <td total-id="12" class="text-right"></td>
+                                                <td global-total class="text-right"></td>
+                              </tr>
+    </tbody>
+  </table>
+ </div>
+  <hr />
+  <p></p>
+  <br />
+  <script type="text/javascript">
+
+	"use strict";
+
+	var NexoPremium_Sales_Statistics	=	new function(){
+
+		this.CurrentDate				=	'2019';
+		this.LatestIds					=	new Array();
+		this.Index						=	0;
+		this.__TimeCalled				=	0;
+		this.Nexo_Order_Avance			=	[ 'nexo_order_advance' ];
+		this.Nexo_Order_Cash			=	["nexo_order_comptant"];
+		this.Nexo_Order_Devis			=	[ 'nexo_order_devis' ];
+		this.CurrencyBefore				=	'';
+		this.CurrencyAfter				=	'OMR';
+
+
+		/**
+		 * Get Latest category Ids
+		 *
+		**/
+
+		this.FetchLatestIds				=	function(){
+			$( 'table tbody tr' ).each( function(){
+				NexoPremium_Sales_Statistics.LatestIds.push( $( this ).find( '[data-id]' ).last().attr( 'data-id' ) );
+			});
+
+			// Fill table
+
+			this.FillValue();
+		};
+
+		/**
+		 * Init
+		**/
+
+		this.Init						=	function(){
+			// FetchLatestIds
+			this.FetchLatestIds();
+		};
+
+		/**
+		 * Fill Value
+		**/
+
+		this.FillValue					=	function(){
+
+			this.EntryLength	=	12; // 12 for the number of month in a year
+			this.Reset();
+			this.__FillTableValue();
+
+		};
+
+		/**
+		 * __FillTableValue()
+		 * Fetch ccontent from db
+		**/
+
+		this.__FillTableValue			=	function( depth ) {
+			if( this.Index < this.EntryLength ) {
+				// Looping IDS
+				$.ajax( 'https://www.cstarsoft.com/restoopos/nexo_premium/sales_stats' + '/' + this.CurrentDate + '?', {
+					beforeSend	:	function(){
+						NexoPremium_Sales_Statistics.DisplayModal();
+					},
+					data		:	_.object( [ 'ids', 'month' ], [ this.LatestIds, this.Index + 1 ] ),
+					type		:	'POST',
+					dataType	:	'json',
+					success		:	function( data ){
+						NexoPremium_Sales_Statistics.TreatProducts( data );
+						NexoPremium_Sales_Statistics.__FillTableValue();
+						NexoPremium_Sales_Statistics.Index++;
+					}
+				});
+			} else {
+				this.ColSubTotal();
+				this.RowSubTotal();
+				this.GlobalTotal();
+				this.CloseModal();
+			}
+		}
+
+        /**
+        *
+        * cartValue
+        *
+        * @param
+        * @return
+        */
+
+        this.cartValue          =   function( item, inlineDiscount ){
+            var cartValue                       =   ( parseFloat( item.TOTAL )
+            // Valeur réelle du panier
+            + ( parseFloat( item.REMISE ) ) ) // + parseFloat( item.RABAIS ) + parseFloat( item.RISTOURNE )
+            // Restauration de la TVA
+            - parseFloat( item.TVA );
+
+            if( inlineDiscount === true ) {
+                // Exclure aussi les remises effectués sur les produits
+                if( item.DISCOUNT_TYPE == 'percentage' && item.DISCOUNT_PERCENT != '0' ) {
+                    cartValue       +=  ( parseInt( item.PRIX_DE_VENTE ) * parseInt( item.DISCOUNT_PERCENT ) ) / 100;
+                } else  { // in this case for fixed discount on item
+                    cartValue       +=  parseInt( item.DISCOUNT_AMOUNT );
+                }
+            }
+
+            return cartValue;
+        };
+
+		/**
+		 * Treat Product
+		 * @param object
+		**/
+
+		this.TreatProducts		=	function( data ) {
+			_.each( data, function( value, key ){
+				var TotalCommandeCash	=	0;
+				_.each( value, function( item, key ) {
+					if( _.contains( NexoPremium_Sales_Statistics.Nexo_Order_Cash, item.TYPE_COMMANDE ) || 
+							_.contains( NexoPremium_Sales_Statistics.Nexo_Order_Avance, item.TYPE_COMMANDE ) 
+						) {
+						// Exclure la TVA du Rapport
+						// @since 2.9.6
+						var $total   =   ( NexoAPI.ParseFloat( item.PRIX_TOTAL ) );
+						if( item.REMISE_TYPE == 'percentage' ) {
+							var $percentage =   (
+									parseFloat( item.REMISE_PERCENT ) *
+									parseFloat( item.PRIX_TOTAL )
+							) / 100;
+							$total      =   NexoAPI.ParseFloat( item.PRIX_TOTAL ) - $percentage;
+						} else if( item.REMISE_TYPE == 'flat' ) {
+							// exclude discount made on item
+							var     percent     =   ( NexoAPI.ParseFloat( item.REMISE ) * 100 ) / NexoPremium_Sales_Statistics.cartValue( item, true );
+							var     $valueOff      =   ( NexoAPI.ParseFloat( item.PRIX_DE_VENTE ) * percent ) / 100;
+
+							$total      =   NexoAPI.ParseFloat( item.PRIX_TOTAL ) - $valueOff;
+						}
+						TotalCommandeCash	+=	$total;
+					}
+				});
+
+				$( 'table tbody tr' ).eq( key - 1 ).find( '[month-id="' + NexoPremium_Sales_Statistics.Index + '"]' ).html(
+					NexoPremium_Sales_Statistics.CurrencyBefore + ' ' +
+					'<span class="amount" amount="' + TotalCommandeCash + '">' + NexoAPI.Format( TotalCommandeCash ) + '</span>' +
+					NexoPremium_Sales_Statistics.CurrencyAfter + ' '
+				);
+			});
+		}
+
+		/**
+		 * Do Calculate Sub Total
+		**/
+
+		this.RowSubTotal		=	function(){
+			// Cal Sub total
+			$( '[total-id]' ).each( function(){
+				var StatVenteRowTotal	=	0;
+				$( '[month-id="' + $( this ).attr( 'total-id' ) + '"]' ).each( function(){
+					StatVenteRowTotal +=	NexoAPI.ParseFloat( $( this ).find( '.amount' ).attr( 'amount' ) );
+				});
+				$( this ).html(
+					NexoPremium_Sales_Statistics.CurrencyBefore + ' ' +
+					'<span class="amount" amount="' + StatVenteRowTotal + '">' + NexoAPI.Format( StatVenteRowTotal ) + '</span>' +
+					NexoPremium_Sales_Statistics.CurrencyAfter + ' '
+				);
+			});
+		}
+
+		/**
+		 * Col Total
+		**/
+
+		this.ColSubTotal		=	function(){
+			// Cal Sub total
+			$( '[col-total]' ).each( function(){
+				var StatVenteColTotal	=	0;
+				$( this ).siblings( '[month-id]' ).each( function(){
+					StatVenteColTotal +=	NexoAPI.ParseFloat( $( this ).find( '.amount' ).attr( 'amount' ) );
+				});
+				$( this ).html(
+					NexoPremium_Sales_Statistics.CurrencyBefore + ' ' +
+					'<span class="amount" amount="' + StatVenteColTotal + '">' + NexoAPI.Format( StatVenteColTotal ) + '</span>' +
+					NexoPremium_Sales_Statistics.CurrencyAfter + ' '
+				);
+			});
+		}
+
+		/**
+		 * Global Total
+		**/
+
+		this.GlobalTotal		=	function(){
+			var SalesStatsGlobal	=	0;
+			$( '[global-total]' ).closest( 'tr' ).find('[total-id]' ).each( function(){
+				SalesStatsGlobal +=	NexoAPI.ParseFloat( $( this ).find( '.amount' ).attr( 'amount' ) );
+			});
+			$( '[global-total]' ).html(
+				NexoPremium_Sales_Statistics.CurrencyBefore + ' ' +
+				'<span class="amount" amount="' + SalesStatsGlobal + '">' + NexoAPI.Format( SalesStatsGlobal ) + '</span>' +
+				NexoPremium_Sales_Statistics.CurrencyAfter + ' '
+			);
+		};
+
+		/**
+		 * Cols Row Total
+		**/
+
+		this.SaleStatsRow		=	function(){
+
+		};
+
+		/**
+		 * Reset the calendar
+		**/
+
+		this.Reset			=	function(){
+			this.__TimeCalled	=	1;
+			$( '.progress_level' ).html( 1 );
+			$( '.progress-bar' ).css( 'width', '1%' ).data( 'aria-valuenow', 1 );
+		}
+
+		/**
+		 * Display Modal
+		**/
+
+		this.DisplayModal	=	function(){
+			if( ! $( '.launch_loading' ).data( 'clicked' ) ) {
+				$( '.launch_loading' ).trigger( 'click' );
+				$( '.launch_loading' ).data( 'clicked', true );
+			} else {
+				var Percent	=	( this.__TimeCalled / this.EntryLength ) * 100;
+				this.SetPercent( Math.ceil( Percent ) );
+			}
+			this.__TimeCalled++;
+		};
+
+		/**
+		 * Progress Bar
+		**/
+
+		this.SetPercent		=	function( percent ) {
+			$( '.progress_level' ).html( percent );
+			$( '.progress-bar' ).css( 'width', percent + '%' ).data( 'aria-valuenow', percent );
+		}
+
+		/**
+		 * Close modal
+		**/
+
+		this.CloseModal		=	function(){
+			$( '[data-dismiss="modal"]' ).trigger( 'click' );
+		}
+	};
+
+	$( document ).ready(function(e) {
+        NexoPremium_Sales_Statistics.Init();
+    });
+
+	</script>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary btn-lg launch_loading" data-toggle="modal" data-target="#myModal" style="display:none;"></button>
+  <div class="modal fade hidden-print" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">
+            Loading in progress…          </h4>
+        </div>
+        <div class="modal-body">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"> <span class="progress_level">0</span>% </div>
+          </div>
+        </div>
+        <div class="modal-footer"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+";}

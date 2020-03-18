@@ -1,0 +1,55 @@
+[24-Dec-2017 14:06:58 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[24-Dec-2017 14:06:58 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[24-Dec-2017 14:07:09 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[24-Dec-2017 14:07:15 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[24-Dec-2017 14:10:24 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[18-Feb-2018 20:14:18 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[18-Feb-2018 20:14:22 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[21-Apr-2018 18:32:23 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[21-Apr-2018 18:46:05 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[21-Apr-2018 18:46:06 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[21-Apr-2018 18:46:07 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[21-Apr-2018 18:46:56 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[21-Apr-2018 18:46:56 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[21-Apr-2018 18:46:57 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-May-2018 20:02:47 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[03-Jun-2018 09:08:18 UTC] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home/cstarsof/public_html/restoopos/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[03-Jun-2018 09:09:48 UTC] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home/cstarsof/public_html/restoopos/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[03-Jun-2018 09:11:20 UTC] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home/cstarsof/public_html/restoopos/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[03-Jun-2018 09:12:51 UTC] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home/cstarsof/public_html/restoopos/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[03-Jun-20[04-Jun-2018 11:07:44 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[26-Jun-2018 13:42:04 UTC] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home/cstarsof/public_html/restoopos/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[26-Jun-2018 13:43:36 UTC] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home/cstarsof/public_html/restoopos/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[26-Jun-2018 13:45:07 UTC] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home/cstarsof/public_html/restoopos/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[28-Jun-2018 08:41:15 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[30-Jun-2018 07:05:17 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[15-Aug-2018 18:37:47 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Aug-2018 18:41:12 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Aug-2018 18:41:21 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Aug-2018 18:41:26 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Aug-2018 18:43:24 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[28-Aug-2018 06:17:38 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[28-Aug-2018 06:17:42 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[28-Aug-2018 06:18:49 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[28-Aug-2018 06:19:02 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[28-Aug-2018 06:19:12 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[01-Oct-2018 14:58:11 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[06-Oct-2018 13:13:07 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/cstarsof/public_html/restoopos/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[06-Oct-2018 13:13:37 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/cstarsof/public_html/restoopos/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[06-Oct-2018 13:14:08 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/cstarsof/public_html/restoopos/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[06-Oct-2018 13:26:39 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/cstarsof/public_html/restoopos/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[06-Oct-2018 13:27:09 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/cstarsof/public_html/restoopos/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[06-Oct-2018 13:27:40 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/cstarsof/public_html/restoopos/system/libraries/Session/drivers/Session_files_driver.php on line 263
+[12-Oct-2018 15:08:18 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[12-Oct-2018 15:13:40 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[12-Oct-2018 15:14:32 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[12-Oct-2018 16:40:33 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[12-Oct-2018 20:33:36 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[18-Dec-2018 06:21:45 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[18-Dec-2018 06:21:48 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[21-Dec-2018 13:46:45 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[29-Jan-2019 15:52:01 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[29-Jan-2019 15:52:05 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[09-Jul-2019 21:52:18 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[09-Jul-2019 21:52:34 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[30-Jan-2020 19:05:52 UTC] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]

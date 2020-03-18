@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application>
+	<namespace>food-stock</namespace>
+	<name>Food Stock Manager</name>
+	<author>Joker</author>
+	<version>1.0</version>
+	<description>Improve the stock management for dishes.</description>
+	<main>food-stock.php</main>
+	<language>language/</language>
+	<dependencies>
+		<module namespace="nexo">Nexo</module>
+	</dependencies>
+</application>

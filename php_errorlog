@@ -1,0 +1,21 @@
+[15-Oct-2017 10:20:25 CST6CDT] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[15-Oct-2017 10:20:29 CST6CDT] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[15-Oct-2017 10:23:38 CST6CDT] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[15-Oct-2017 10:23:49 CST6CDT] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[15-Oct-2017 10:31:09 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Oct-2017 10:31:13 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Oct-2017 10:31:13 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Oct-2017 10:31:56 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Oct-2017 10:31:57 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Oct-2017 10:32:00 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Oct-2017 10:32:10 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Oct-2017 10:32:11 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Oct-2017 10:34:11 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Oct-2017 10:34:14 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Oct-2017 10:34:19 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Oct-2017 10:34:20 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Oct-2017 11:46:18 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[15-Oct-2017 13:19:19 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[17-Oct-2017 04:32:51 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[17-Oct-2017 04:32:55 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
+[17-Oct-2017 04:39:18 CST6CDT] ["DESIGN","DESIGN_AR","SKU","REF_CATEGORIE","REF_RAYON","AUTO_BARCODE","BARCODE_TYPE","CODEBAR"]
